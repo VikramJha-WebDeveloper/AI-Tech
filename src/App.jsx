@@ -17,28 +17,37 @@ function App() {
       <BrowserRouter>
         <Navbar></Navbar>
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/about" element={<AboutPage></AboutPage>}></Route>
+          <Route path="/AI-Tech" element={<Home></Home>}></Route>
           <Route
-            path="/services"
+            path="/AI-Tech/about"
+            element={<AboutPage></AboutPage>}
+          ></Route>
+          <Route
+            path="/AI-Tech/services"
             element={<ServicesPage></ServicesPage>}
           ></Route>
           <Route
-            path="/projects"
+            path="/AI-Tech/projects"
             element={<ProjectsPage></ProjectsPage>}
           ></Route>
           <Route
-            path="/features"
+            path="/AI-Tech/features"
             element={<FeaturesPage></FeaturesPage>}
           ></Route>
-          <Route path="/team" element={<OurTeamPage></OurTeamPage>}></Route>
-          <Route path="/faqs" element={<FAQsPage></FAQsPage>}></Route>
           <Route
-            path="/testimonial"
+            path="/AI-Tech/team"
+            element={<OurTeamPage></OurTeamPage>}
+          ></Route>
+          <Route path="/AI-Tech/faqs" element={<FAQsPage></FAQsPage>}></Route>
+          <Route
+            path="/AI-Tech/testimonial"
             element={<TestimonialsPage></TestimonialsPage>}
           ></Route>
-          <Route path="/error" element={<ErrorPage></ErrorPage>}></Route>
-          <Route path="/contact" element={<Contact></Contact>}></Route>
+          <Route
+            path="/AI-Tech/error"
+            element={<ErrorPage></ErrorPage>}
+          ></Route>
+          <Route path="/AI-Tech/contact" element={<Contact></Contact>}></Route>
         </Routes>
       </BrowserRouter>
     </>
