@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -14,42 +14,33 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Navbar></Navbar>
         <Routes>
-          <Route path="/AI-Tech" element={<Home></Home>}></Route>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/about" element={<AboutPage></AboutPage>}></Route>
           <Route
-            path="/AI-Tech/about"
-            element={<AboutPage></AboutPage>}
-          ></Route>
-          <Route
-            path="/AI-Tech/services"
+            path="/services"
             element={<ServicesPage></ServicesPage>}
           ></Route>
           <Route
-            path="/AI-Tech/projects"
+            path="/projects"
             element={<ProjectsPage></ProjectsPage>}
           ></Route>
           <Route
-            path="/AI-Tech/features"
+            path="/features"
             element={<FeaturesPage></FeaturesPage>}
           ></Route>
+          <Route path="/team" element={<OurTeamPage></OurTeamPage>}></Route>
+          <Route path="/faqs" element={<FAQsPage></FAQsPage>}></Route>
           <Route
-            path="/AI-Tech/team"
-            element={<OurTeamPage></OurTeamPage>}
-          ></Route>
-          <Route path="/AI-Tech/faqs" element={<FAQsPage></FAQsPage>}></Route>
-          <Route
-            path="/AI-Tech/testimonial"
+            path="/testimonial"
             element={<TestimonialsPage></TestimonialsPage>}
           ></Route>
-          <Route
-            path="/AI-Tech/error"
-            element={<ErrorPage></ErrorPage>}
-          ></Route>
-          <Route path="/AI-Tech/contact" element={<Contact></Contact>}></Route>
+          <Route path="/error" element={<ErrorPage></ErrorPage>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
